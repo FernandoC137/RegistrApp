@@ -1,0 +1,33 @@
+<ion-header >
+  <ion-toolbar class="fondoazul">
+    <ion-buttons slot="start">
+      <ion-button (click)="mostrarMenu()" >
+        <ion-icon slot="icon-only" name="menu-outline" class="amarillo"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title class="amarillo">informacion</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="fondoamarillo">
+
+  <ion-card style="background-color: white;">
+    <ion-card-title class="letrasnegras l">Modo de uso</ion-card-title>
+    <img src="assets/qr.jpg" class="ion-padding fondoImg" >
+    
+    <ion-card-content class="letrasnegras">
+      <ion-card-subtitle class="letrasnegras">Por parte del profesor</ion-card-subtitle>
+
+1. Debe ingresar <br>
+2. Despues despliega el codigo QR<br>
+3. Puede o no revisar la asistencia<br>
+4. Debe de guardar la asistencia
+
+</ion-card-content>
+<ion-card-content class="letrasnegras">
+  <ion-card-subtitle class="letrasnegras">Por parte del alumno</ion-card-subtitle>
+1. Desplegar la camara<br>
+2. Luego escanear el codigo el cual debe de estar activo el codigo QR por parte del profesor
+    </ion-card-content>
+  </ion-card>
+</ion-content>
