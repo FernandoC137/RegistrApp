@@ -1,0 +1,170 @@
+<ion-header >
+  <ion-toolbar class="fondoazul">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/"
+        text="volver"
+        class="amarillo"></ion-back-button>
+    </ion-buttons>
+    <ion-title class="amarillo">registrarse</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+ 
+  <ion-content [fullscreen]="true" class="fondoamarillo">
+  <ion-card>
+    <form [formGroup]="loginForm">
+      
+    
+  
+    <ion-list >
+      <ion-item>
+        <ion-label position="floating" class="letrasblancas">Nombre:    <ion-text color="danger">*</ion-text> </ion-label>
+        <ion-input type="text" placeholder="Digite su pass.."
+        name="nombre" [(ngModel)]="docente.nombre" formControlName="nombre"></ion-input>
+      </ion-item>
+      <div *ngIf="loginForm.get('nombre')?.invalid && (loginForm.get('nombre')?.dirty || 
+                loginForm.get('nombre')?.touched)">
+          <div style="color:red" *ngIf="loginForm.get('nombre')?.hasError('required')">
+            *nombre es obligatorio
+          </div>
+          <div style="color:red" *ngIf="loginForm.get('nombre')?.hasError('minlength')">
+            *Nombre Mínimo de 4 caracteres 
+          </div>
+          <div style="color:red" *ngIf="loginForm.get('nombre')?.hasError('maxlength')">
+            *Nombre maximo de 50 caracteres 
+          </div>
+    </div>
+      <ion-item>
+        <ion-label position="floating" class="letrasblancas">Correo institucional:   <ion-text color="danger">*</ion-text></ion-label>
+        <ion-input type="email" placeholder="Digite su email"
+        name="correo" [(ngModel)]="docente.correo" formControlName="correo"></ion-input>
+      </ion-item>
+      <div *ngIf="loginForm.get('correo')?.invalid && (loginForm.get('correo')?.dirty || 
+                loginForm.get('correo')?.touched)">
+          <div style="color:red" *ngIf="loginForm.get('correo')?.hasError('required')">
+            *correo es obligatorio
+          </div>
+          <div style="color:red" *ngIf="loginForm.get('correo')?.hasError('email')">
+            *correo invalido
+          </div>
+    </div>
+      <ion-item>
+        <ion-label  position="floating " class="letrasblancas">Contraseña:   <ion-text color="danger">*</ion-text></ion-label>
+        <ion-input type="password" placeholder="Digite su pass.."
+        name="contrasena" [(ngModel)]="docente.contrasena" formControlName="contrasena"></ion-input>
+      </ion-item>
+      <div *ngIf="loginForm.get('contrasena')?.invalid && (loginForm.get('contrasena')?.dirty || 
+                loginForm.get('contrasena')?.touched)">
+          <div style="color:red" *ngIf="loginForm.get('contrasena')?.hasError('required')">
+            *Contraseña es obligatorio
+          </div>
+          <div style="color:red" *ngIf="loginForm.get('contrasena')?.hasError('minlength')">
+            *Contraseña Mínimo de 6 caracteres 
+          </div>
+          <div style="color:red" *ngIf="loginForm.get('contrasena')?.hasError('maxlength')">
+            *Contraseña maximo de 16 caracteres 
+          </div>
+          <div style="color:red" *ngIf="loginForm.get('contrasena')?.hasError('pattern')">
+            *Contraseña debe contener un numero y una mayuscula
+          </div>
+    </div>
+    
+      
+      <ion-item>
+        <ion-select class="letrasblancas" label="Jornada:" placeholder="Tipo de jornada"
+        name="jornada" [(ngModel)]="docente.jornada" formControlName="jornada"><ion-text color="danger">*</ion-text>
+          <ion-select-option value="diurno" class="letrasblancas">Diurno</ion-select-option>
+          <ion-select-option value="vespertino" class="letrasblancas">Vespertino</ion-select-option>
+          
+        </ion-select>
+        
+      </ion-item>
+      <div *ngIf="loginForm.get('jornada')?.invalid ">
+          <div style="color:red" *ngIf="loginForm.get('jornada')?.hasError('required')">
+            *Jornada es obligatoria
+          </div>
+          
+      </div>
+  
+    
+    <h3 class="letrasblancas">Asignatura</h3>
+    <div formArrayName="asignaturas">
+
+
+
+      <div *ngFor="let asignatura of asignaturas.controls; let i = index" [formGroupName]="i">
+        <ion-item>
+          <ion-label position="floating" class="letrasblancas">Nombre de Asignatura: <ion-text color="danger">*</ion-text></ion-label>
+          <ion-input formControlName="nombreAsignatura" type="text"></ion-input>
+        </ion-item>
+
+        <div *ngIf="loginForm.get('nombreAsignatura')?.invalid && (loginForm.get('nombreAsignatura')?.dirty || 
+                loginForm.get('nombreAsignatura')?.touched)">
+          <div style="color:red" *ngIf="loginForm.get('nombreAsignatura')?.hasError('required')">
+            *nombre de la asignatura es obligatorio
+          </div>
+          <div style="color:red" *ngIf="loginForm.get('nombreAsignatura')?.hasError('minlength')">
+            * Mínimo de 4 caracteres 
+          </div>
+          <div style="color:red" *ngIf="loginForm.get('nombreAsignatura')?.hasError('maxlength')">
+            * maximo de 50 caracteres 
+          </div>
+        </div>
+
+
+
+        <ion-item>
+          <ion-label position="floating" class="letrasblancas">Horas Semanales: <ion-text color="danger">*</ion-text></ion-label>
+          <ion-input formControlName="horasSemanales" type="number"></ion-input>
+        </ion-item>
+
+
+        <div *ngIf="loginForm.get('horasSemanales')?.invalid && (loginForm.get('horasSemanales')?.dirty || 
+                loginForm.get('horasSemanales')?.touched)">
+          <div style="color:red" *ngIf="loginForm.get('horasSemanales')?.hasError('required')">
+            *Las horas son obligatorias
+          </div>
+          
+        </div>
+
+
+        <ion-item>
+          <ion-label position="floating" class="letrasblancas">periodo: <ion-text color="danger">*</ion-text></ion-label>
+          <ion-input formControlName="periodo" type="number"></ion-input>
+        </ion-item>
+
+        <div *ngIf="loginForm.get('periodo')?.invalid && (loginForm.get('periodo')?.dirty || 
+                loginForm.get('periodo')?.touched)">
+          <div style="color:red" *ngIf="loginForm.get('periodo')?.hasError('required')">
+            *periodo es obligatorio
+          </div>
+          <div style="color:red" *ngIf="loginForm.get('periodo')?.hasError('minlength')">
+            * Mínimo de 6 caracteres 
+          </div>
+        </div>
+
+      </div>
+    </div>
+    <ion-toolbar>
+      
+      <ion-button   (click)="addAsignatura()"slot="start" fill="solid" shape="round" class="fondoazul"  >
+        <p class="letrasblancas"> 1 asignatura más</p>
+        </ion-button>
+    </ion-toolbar>
+    
+    <ion-toolbar>
+      <ion-button   (click)="Enviar()" slot="end" fill="solid" shape="round" class="fondoazul" routerLink="/inicio"  >
+      <p class="letrasblancas"> Confirmar</p>
+      </ion-button>
+      
+    </ion-toolbar>
+
+  </ion-list>
+  </form>
+</ion-card>
+
+
+
+
+</ion-content>

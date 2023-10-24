@@ -1,0 +1,39 @@
+<ion-header >
+  <ion-toolbar  class="fondoazul">
+    <ion-buttons slot="start"  >
+      <ion-button (click)="mostrarMenu()" >
+        <ion-icon slot="icon-only" name="menu-outline" class="amarillo "></ion-icon>
+      
+      </ion-button>
+      
+    
+    </ion-buttons>
+    
+    <ion-title class="amarillo letras">RegistrApp</ion-title>
+<ion-button *ngIf="loggedIn()" (click)="cerrarSesion()" slot="end" class="fondoazul">
+        <ion-icon slot="icon-only" name="log-out-outline" class="amarillo " ></ion-icon>
+      </ion-button>
+    
+  </ion-toolbar>
+</ion-header >
+
+<ion-content [fullscreen]="true" class="fondoamarillo" >
+  
+  <ion-card style="background-color: white;">
+  
+    <ion-card-title *ngIf="loggedIn()" class="letrasnegras">Bienvenido señor/a {{bienvenido()}}</ion-card-title>
+  <img src="assets/LogoDuoc.png" class="ion-padding fondoImg" style="height: 70px; width: 160px;">
+  
+  <img src="assets/qr_duoc.png" class="ion-padding fondoImg">
+  
+  <ion-toolbar class="fondoamarillo" >
+    <ion-button  slot="end" fill="solid" shape="round" class="fondoazul " (click)="tipo_registro()"  >
+    <p class="letrasblancas">  Registrarse</p>
+    </ion-button>
+    <ion-button  slot="start" fill="solid" shape="round" class="fondoazul" routerLink="/login"  >
+    <p class="letrasblancas">   Login</p>
+    </ion-button>
+  </ion-toolbar>
+  </ion-card>
+  
+</ion-content>
