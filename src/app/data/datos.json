@@ -1,0 +1,271 @@
+{
+  "docente": [
+    {
+      "id": 1,
+      "nombre": "cachupin",
+      "correo": "cachupin@duocuc.cl",
+      "jornada": "vespertino",
+      "role": "docente",
+      "contrasena": "duocmaipu"
+    },
+    {
+      "id": 2,
+      "nombre": "cachun",
+      "correo": "cachun@duocuc.cl",
+      "jornada": "vespertino",
+      "role": "docente",
+      "contrasena": "duocmaipu"
+    },
+    {
+      "nombre": "aw sdas",
+      "correo": "dfgsd@fdsfsdf",
+      "contrasena": "fdsfsdf",
+      "jornada": "diurno",
+      "role": "docente",
+      "id": 3
+    },
+    {
+      "nombre": "ewrewsr",
+      "correo": "dsadas@dsadas",
+      "contrasena": "sadasdasd",
+      "jornada": "vespertino",
+      "role": "docente",
+      "id": 4
+    },
+    {
+      "nombre": "juan carlos bodoque",
+      "correo": "LibroVerde@gmail.com",
+      "contrasena": "librorojo",
+      "jornada": "diurno",
+      "role": "docente",
+      "id": 5
+    },
+    {
+      "nombre": "jose Roberto",
+      "correo": "Jroberto@gmail.com",
+      "contrasena": "joserobertoA1",
+      "jornada": "diurno",
+      "role": "docente",
+      "id": 6
+    },
+    {
+      "nombre": "francisco contreras",
+      "correo": "Fcontreras@gmail.com",
+      "contrasena": "Fcontreras2",
+      "jornada": "diurno",
+      "asignaturas": [
+        {
+          "nombreAsignatura": "estadistica",
+          "horasSemanales": 6,
+          "periodo": ""
+        },
+        {
+          "nombreAsignatura": "matematica aplicada ",
+          "horasSemanales": 7,
+          "periodo": ""
+        }
+      ],
+      "role": "docente",
+      "id": 7
+    },
+    {
+      "nombre": "dsfsdf",
+      "correo": "drsdr@fdsf",
+      "contrasena": "dsadasA2",
+      "jornada": "diurno",
+      "asignaturas": [
+        {
+          "nombreAsignatura": "assas1212",
+          "horasSemanales": 121221,
+          "periodo": ""
+        }
+      ],
+      "role": "docente",
+      "id": 8
+    },
+    {
+      "nombre": "dwasd",
+      "correo": "#@da",
+      "contrasena": "AS21sadd",
+      "jornada": "diurno",
+      "asignaturas": [
+        {
+          "nombreAsignatura": "dasd",
+          "horasSemanales": 2313,
+          "periodo": ""
+        },
+        {
+          "nombreAsignatura": "asdad",
+          "horasSemanales": 2313,
+          "periodo": ""
+        }
+      ],
+      "role": "docente",
+      "id": 9
+    },
+    {
+      "nombre": "rewr",
+      "correo": "ewrw#rfs@dsad",
+      "contrasena": "asdADSSA231",
+      "jornada": "diurno",
+      "asignaturas": [
+        {
+          "nombreAsignatura": "dasda",
+          "horasSemanales": 2313,
+          "periodo": ""
+        },
+        {
+          "nombreAsignatura": "Dsad",
+          "horasSemanales": 3213,
+          "periodo": ""
+        }
+      ],
+      "role": "docente",
+      "id": 10
+    },
+    {
+      "nombre": "",
+      "correo": "",
+      "contrasena": "",
+      "jornada": "",
+      "asignaturas": [
+        {
+          "nombreAsignatura": "",
+          "horasSemanales": "",
+          "periodo": ""
+        },
+        {
+          "nombreAsignatura": "",
+          "horasSemanales": "",
+          "periodo": ""
+        }
+      ],
+      "role": "docente",
+      "id": 11
+    },
+    {
+      "nombre": "",
+      "correo": "",
+      "contrasena": "",
+      "jornada": "",
+      "asignaturas": [
+        {
+          "nombreAsignatura": "",
+          "horasSemanales": "",
+          "periodo": ""
+        },
+        {
+          "nombreAsignatura": "",
+          "horasSemanales": "",
+          "periodo": ""
+        }
+      ],
+      "role": "docente",
+      "id": 12
+    },
+    {
+      "nombre": "jaime",
+      "correo": "jaime@jaime",
+      "contrasena": "Jaime1aa",
+      "jornada": "diurno",
+      "asignaturas": [
+        {
+          "nombreAsignatura": "ingles",
+          "horasSemanales": 5,
+          "periodo": ""
+        },
+        {
+          "nombreAsignatura": "sdad",
+          "horasSemanales": 324,
+          "periodo": ""
+        },
+        {
+          "nombreAsignatura": "dadsd",
+          "horasSemanales": 21321,
+          "periodo": ""
+        }
+      ],
+      "role": "docente",
+      "id": 13
+    }
+  ],
+  "alumno": [
+    {
+      "id": 1
+    },
+    {
+      "nombre": "dasdsad",
+      "correo": "sdadada@sad",
+      "contrasena": "dsgds44A",
+      "role": "alumno",
+      "carrera": "",
+      "jornada": "",
+      "id": 2
+    },
+    {
+      "nombre": "asdASD",
+      "correo": "cds#df@dfsa",
+      "contrasena": "dsaddS23",
+      "role": "alumno",
+      "carrera": "asxdad",
+      "jornada": "diurno",
+      "id": 3
+    },
+    {
+      "nombre": "roberto",
+      "correo": "robertogamer777@lolxsiempre.com",
+      "contrasena": "Wigetta777",
+      "role": "alumno",
+      "carrera": "artes",
+      "jornada": "diurno",
+      "id": 4
+    }
+  ],
+  "feriado": [
+    {
+      "id": 1,
+      "dia": "Martes, 15 de Agosto",
+      "causa": "Asunción de la Virgen"
+    },
+    {
+      "id": 2,
+      "dia": "Lunes, 18 de Septiembre",
+      "causa": "Independencia Nacional"
+    },
+    {
+      "id": 3,
+      "dia": "Martes, 19 de Septiembre",
+      "causa": "Día de las Glorias del Ejército"
+    },
+    {
+      "id": 4,
+      "dia": "Lunes, 09 de Octubre",
+      "causa": "Encuentro de Dos Mundos"
+    },
+    {
+      "id": 5,
+      "dia": "Viernes, 27 de Octubre",
+      "causa": "Día de las Iglesias Evangélicas y Protestantes"
+    },
+    {
+      "id": 6,
+      "dia": "Miércoles, 01 de Noviembre",
+      "causa": "Día de Todos los Santos"
+    },
+    {
+      "id": 7,
+      "dia": "Viernes, 08 de Diciembre",
+      "causa": "Inmaculada Concepción"
+    },
+    {
+      "id": 8,
+      "dia": "Domingo, 17 de Diciembre",
+      "causa": "Plebiscito Nacional"
+    },
+    {
+      "id": 9,
+      "dia": "Lunes, 25 de Diciembre",
+      "causa": "Navidad"
+    }
+  ]
+}

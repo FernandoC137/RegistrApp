@@ -1,0 +1,60 @@
+<ion-header >
+  <ion-toolbar class="fondoazul">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/"
+        text="volver"
+        class="amarillo"></ion-back-button>
+    </ion-buttons>
+    <ion-title class="amarillo ">Log in</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="fondoamarillo">
+  
+<ion-card >
+  
+
+    <form [formGroup]="loginForm">  <!--contenedor de elementos-->
+      <ion-item>
+        <ion-label position="floating">correo: </ion-label>
+        <ion-input type="text" formControlName="username"></ion-input>
+      </ion-item>
+
+      <div *ngIf="loginForm.get('username')?.invalid && (loginForm.get('username')?.dirty || 
+                  loginForm.get('username')?.touched)">
+            <div style="color:red" *ngIf="loginForm.get('username')?.hasError('required')">
+              *correo es obligatorio
+            </div>
+            <div style="color:red" *ngIf="loginForm.get('username')?.hasError('minlength')">
+              *correo Mínimo de 4 caracteres 
+            </div>
+      </div>
+      <ion-item>
+        <ion-label position="floating">contraseña: </ion-label>
+        <ion-input type="password" formControlName="password"></ion-input>
+      </ion-item>
+      <div *ngIf="loginForm.get('password')?.invalid && (loginForm.get('password')?.dirty || 
+                  loginForm.get('password')?.touched)">
+            <div style="color:red" *ngIf="loginForm.get('password')?.hasError('required')">
+              *Password es obligatorio
+            </div>
+            <div style="color:red" *ngIf="loginForm.get('password')?.hasError('minlength')">
+              *Password Mínimo de 4 caracteres 
+            </div>
+      </div>
+
+
+
+
+
+      
+  <ion-toolbar>
+    <ion-button  (click)="login()" fill="solid" shape="round"  routerLink="/inicio"  
+    class="fondoazul ">
+    <p class="letrasblancas"> Confirmar</p> 
+    </ion-button>
+  </ion-toolbar>
+  
+  </form>
+  </ion-card>
+</ion-content>

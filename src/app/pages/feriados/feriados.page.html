@@ -1,0 +1,22 @@
+<ion-header >
+  <ion-toolbar class="fondoazul">
+    <ion-buttons slot="start">
+      <ion-button (click)="mostrarMenu()" >
+        <ion-icon slot="icon-only" name="menu-outline" class="amarillo"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title class="amarillo">Feriados 2° semestre</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="fondoamarillo">
+
+  <br>
+  <br>
+      <ion-item *ngFor="let a of feriados; let i=index" class="fondoazul" >  
+        <ion-label class="amarillo">{{a['dia']}},<br> {{a['causa']}} </ion-label>    
+        
+      </ion-item>
+
+</ion-content>
+
