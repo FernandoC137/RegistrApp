@@ -1,0 +1,21 @@
+<ion-header >
+  <ion-toolbar class="fondoazul">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/"
+        text="volver"
+        class="amarillo"></ion-back-button>
+    </ion-buttons>
+    <ion-title class="amarillo ">Recuperar Contraseña</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="fondoamarillo">
+  
+<ion-card >
+  <form (ngSubmit)="resetPassword(email)">
+    <input position="floating" type="email" placeholder="Correo electrónico" [(ngModel)]="email" required>
+    <button type="submit">Restablecer Contraseña</button>
+  </form>
+  
+</ion-card>
+</ion-content>

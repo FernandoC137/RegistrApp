@@ -1,0 +1,18 @@
+<ion-header >
+  <ion-toolbar class="fondoazul">
+    <ion-buttons slot="start">
+      <ion-button (click)="mostrarMenu()" >
+        <ion-icon slot="icon-only" name="menu-outline" class="amarillo"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title class="amarillo">QR</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="fondoamarillo">
+
+  <ion-card style="background-color: white;">
+    <qrcode [qrdata]="qrCodeString" [width]="256" [errorCorrectionLevel]="'M'"></qrcode>
+  </ion-card>
+</ion-content>
+
